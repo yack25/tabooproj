@@ -103,16 +103,16 @@ function hoverTdSection1(id1, id2, id3, id4, id5, id6, isFromFirstRow) {
     //document.getElementById(id2).classList.add("image-container-td-h");
     //document.getElementById(id3).classList.remove("icon-td-hidden");
     //document.getElementById(id4).classList.remove("icon-td-hidden");
-    document.getElementById(id1).className += ' real_img-td-h';
-    document.getElementById(id2).className += ' image-container-td-h';
-    document.getElementById(id3).className -= ' icon-td-hidden';
-    document.getElementById(id4).className -= ' icon-td-hidden';
+    document.getElementById(id1).className = 'img-abs real_img-td-h';
+    document.getElementById(id2).className = 'image-container-td image-container-td-h';
+    document.getElementById(id3).className = 'icon-cnt-td';
+    document.getElementById(id4).className = 'icon-td';
 	
 	//document.getElementById(id5).className = 'cut-span';//style.color = '#33b52f';//classList.add("text-td-h");
     
 	
 	//document.getElementById(id5).classList.add("text-td-h");
-    document.getElementById(id5).className += ' text-td-h';
+    document.getElementById(id5).className = 'cut-span text-td-h';
 	
 	//
 
@@ -126,12 +126,12 @@ function hoverTdSection1(id1, id2, id3, id4, id5, id6, isFromFirstRow) {
 
 function leaveTdSection1(id1, id2, id3, id4, id5, id6, isFromFirstRow) {
 
-    document.getElementById(id1).className -= " real_img-td-h";
-    document.getElementById(id2).className -= " image-container-td-h";
-    document.getElementById(id3).className -= " icon-td-hidden";
-    document.getElementById(id4).className += " icon-td-hidden";
+    document.getElementById(id1).className = "img-abs";
+    document.getElementById(id2).className = "image-container-td";
+    document.getElementById(id3).className = "icon-cnt-td icon-td-hidden";
+    document.getElementById(id4).className = "icon-td icon-td-hidden";
     //document.getElementById(id5).className = 'cut-span';//.style.color = '#000000';//.classList.remove("text-td-h");
-    document.getElementById(id5).className -= " text-td-h";
+    document.getElementById(id5).className = "cut-span";
 
     document.getElementById(id6).style.color = '#000000';//.classList.remove("text-td-h");
 
@@ -165,7 +165,7 @@ function section3changeThirdItem(duration) {
     imgEl.src = "http://cambodiaflag.facts.co/FlagofCambodia1975-1976.jpg";
 
     var oldDurationEl = document.getElementById('duration2');
-    oldDurationEl.className += " icon-td-hidden";
+    oldDurationEl.className = "icon-td-hidden";
 
     var newDuration = ('<span id="duration20">' + duration + '</span>');
 
@@ -183,12 +183,12 @@ function section3changeThirdItem(duration) {
 function hoverTdSection3(id1, id2, id3, id4, id5, id6, isFromFirstRow) {
     hoverTdSection1(id1, id2, id3, id4, id5, id6, isFromFirstRow);
     if(id1 == 'img2')
-        document.getElementById('duration20').className += ' text-td-h';
+        document.getElementById('duration20').className = 'd20div text-td-h';
 
 }
 
 function leaveTdSection3(id1, id2, id3, id4, id5, id6, isFromFirstRow) {
     leaveTdSection1(id1, id2, id3, id4, id5, id6, isFromFirstRow);
     if(id1 == 'img2')
-        document.getElementById('duration20').className -= ' text-td-h';
+        document.getElementById('duration20').className = 'd20div';
 }
